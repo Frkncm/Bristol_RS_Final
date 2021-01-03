@@ -302,8 +302,9 @@ void loop() {
     case STOP_SYSTEM: {
         leftMotor.motorControl(0);
         rightMotor.motorControl(0);
-        bool readPin = digitalRead(30);
-        if (readPin == LOW) {
+        /*
+          bool readPin = digitalRead(30);
+          if (readPin == LOW) {
           imclc.stable_velocity = false;
           imclc.velocity = 0;
           imclc.turnRotation = 0;
@@ -311,7 +312,7 @@ void loop() {
           imclc.Ynew = 0;
           countTask = 0;
           GO_HANDLE(IDLE_STATE);
-        }
+          }*/
         break;
       }
     default : {
